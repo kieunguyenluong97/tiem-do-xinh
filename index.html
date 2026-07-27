@@ -78,10 +78,13 @@
   .card-body{ padding: 10px 12px 14px; }
   .card-name{ font-size: 13px; font-weight:600; line-height:1.3; margin-bottom:6px; min-height: 34px; }
   .card-price{ font-size: 13px; color: var(--pink-deep); font-weight:700; }
+  .card-btns{ display:flex; gap:6px; margin-top:8px; }
   .card-btn{
-    margin-top:8px; text-align:center; font-size:12px; font-weight:700;
-    background: var(--pink-soft); color: var(--pink-deep); padding:7px 0; border-radius:999px;
+    flex:1; text-align:center; font-size:11px; font-weight:700;
+    padding:7px 0; border-radius:999px; text-decoration:none; white-space:nowrap;
   }
+  .card-btn.shopee{ background:#fff0e8; color:#ee4d2d; }
+  .card-btn.tiktok{ background:#2a2a2a; color:#ffffff; }
 
   /* Coming soon block */
   .soon{
@@ -131,41 +134,53 @@
       </div>
       <div class="grid">
 
-        <a class="card" href="#" target="_blank">
+        <div class="card">
           <img src="images/quan-ong-rong-1.jpg" alt="Quần ống rộng kem phối áo da nâu">
           <div class="card-body">
             <div class="card-name">Quần ống rộng kem – phối áo da nâu</div>
             <div class="card-price">Xem giá tại shop</div>
-            <div class="card-btn">Mua ngay →</div>
+            <div class="card-btns">
+              <a class="card-btn shopee" href="#" target="_blank">Shopee</a>
+              <a class="card-btn tiktok" href="#" target="_blank">TikTok Shop</a>
+            </div>
           </div>
-        </a>
+        </div>
 
-        <a class="card" href="#" target="_blank">
+        <div class="card">
           <img src="images/quan-ong-rong-2.jpg" alt="Quần ống rộng dạo phố">
           <div class="card-body">
             <div class="card-name">Quần ống rộng basic – dễ phối đồ</div>
             <div class="card-price">Xem giá tại shop</div>
-            <div class="card-btn">Mua ngay →</div>
+            <div class="card-btns">
+              <a class="card-btn shopee" href="#" target="_blank">Shopee</a>
+              <a class="card-btn tiktok" href="#" target="_blank">TikTok Shop</a>
+            </div>
           </div>
-        </a>
+        </div>
 
-        <a class="card" href="#" target="_blank">
+        <div class="card">
           <img src="images/quan-ong-rong-3.jpg" alt="Quần ống rộng set dạo phố">
           <div class="card-body">
             <div class="card-name">Quần ống rộng vải suông – tôn dáng</div>
             <div class="card-price">Xem giá tại shop</div>
-            <div class="card-btn">Mua ngay →</div>
+            <div class="card-btns">
+              <a class="card-btn shopee" href="#" target="_blank">Shopee</a>
+              <a class="card-btn tiktok" href="#" target="_blank">TikTok Shop</a>
+            </div>
           </div>
-        </a>
+        </div>
 
-        <a class="card" href="#" target="_blank">
+        <div class="card">
           <img src="images/quan-ong-rong-4.jpg" alt="Quần ống rộng phối kính mát">
           <div class="card-body">
             <div class="card-name">Quần ống rộng form Hàn Quốc</div>
             <div class="card-price">Xem giá tại shop</div>
-            <div class="card-btn">Mua ngay →</div>
+            <div class="card-btns">
+              <a class="card-btn shopee" href="#" target="_blank">Shopee</a>
+              <a class="card-btn tiktok" href="#" target="_blank">TikTok Shop</a>
+            </div>
           </div>
-        </a>
+        </div>
 
       </div>
     </section>
