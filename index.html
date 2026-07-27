@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiệm Đồ Xinh — Link sản phẩm</title>
+<style>
+  :root{
+    --pink: #ffd8e6;
+    --pink-soft: #ffeef3;
+    --pink-dark: #e8749e;
+    --pink-deep: #c25b83;
+    --cream: #fff9f6;
+    --text: #4a3a40;
+    --text-light: #8a7580;
+    --white: #ffffff;
+    --shadow: 0 8px 24px rgba(232, 116, 158, 0.12);
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  body{
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(180deg, var(--pink-soft) 0%, var(--cream) 320px, var(--cream) 100%);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  .wrap{ max-width: 480px; margin: 0 auto; padding: 0 20px 60px; }
+
+  /* Hero */
+  .hero{ text-align:center; padding: 40px 0 24px; }
+  .avatar{
+    width: 96px; height:96px; border-radius:50%;
+    background: linear-gradient(135deg, var(--pink), #ffc4dc);
+    display:flex; align-items:center; justify-content:center;
+    margin: 0 auto 14px; font-size: 36px; box-shadow: var(--shadow);
+    border: 3px solid var(--white);
+  }
+  .brand{ font-size: 24px; font-weight: 700; color: var(--pink-deep); letter-spacing: 0.3px; }
+  .tagline{ font-size: 13.5px; color: var(--text-light); margin-top: 6px; }
+  .socials{ display:flex; gap:10px; justify-content:center; margin-top: 16px; }
+  .socials a{
+    width: 38px; height: 38px; border-radius:50%; background: var(--white);
+    display:flex; align-items:center; justify-content:center; text-decoration:none;
+    box-shadow: var(--shadow); font-size: 16px;
+  }
+
+  /* Category tabs */
+  .tabs{
+    display:flex; gap:8px; overflow-x:auto; padding: 4px 2px 22px;
+    -ms-overflow-style:none; scrollbar-width:none;
+  }
+  .tabs::-webkit-scrollbar{ display:none; }
+  .tab{
+    flex: 0 0 auto; padding: 9px 18px; border-radius: 999px; background: var(--white);
+    color: var(--text); font-size: 13.5px; font-weight: 600; cursor:pointer;
+    box-shadow: var(--shadow); border: 1.5px solid transparent; white-space:nowrap;
+    transition: all .15s ease;
+  }
+  .tab.active{ background: var(--pink-dark); color: var(--white); }
+
+  /* Section title */
+  .section-title{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom: 14px;
+  }
+  .section-title h2{ font-size: 17px; color: var(--pink-deep); }
+  .section-title .count{ font-size: 12px; color: var(--text-light); }
+
+  /* Product grid */
+  .grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .card{
+    background: var(--white); border-radius: 18px; overflow:hidden;
+    box-shadow: var(--shadow); text-decoration:none; color: var(--text);
+    display:flex; flex-direction:column;
+    transition: transform .15s ease;
+  }
+  .card:active{ transform: scale(0.97); }
+  .card img{ width:100%; aspect-ratio: 3/4; object-fit: cover; display:block; }
+  .card-body{ padding: 10px 12px 14px; }
+  .card-name{ font-size: 13px; font-weight:600; line-height:1.3; margin-bottom:6px; min-height: 34px; }
+  .card-price{ font-size: 13px; color: var(--pink-deep); font-weight:700; }
+  .card-btn{
+    margin-top:8px; text-align:center; font-size:12px; font-weight:700;
+    background: var(--pink-soft); color: var(--pink-deep); padding:7px 0; border-radius:999px;
+  }
+
+  /* Coming soon block */
+  .soon{
+    background: var(--white); border-radius: 18px; padding: 28px 20px;
+    text-align:center; box-shadow: var(--shadow); color: var(--text-light);
+  }
+  .soon .icon{ font-size: 26px; margin-bottom:8px; }
+  .soon .label{ font-size: 13.5px; font-weight:600; color: var(--text); }
+  .soon .sub{ font-size: 12px; margin-top:4px; }
+
+  .cat-section{ margin-bottom: 34px; }
+  .cat-section[hidden]{ display:none; }
+
+  footer{
+    text-align:center; margin-top: 30px; font-size: 11.5px; color: var(--text-light);
+    padding-top: 20px; border-top: 1px solid #f1dde3;
+  }
+  footer a{ color: var(--pink-deep); text-decoration:none; font-weight:600; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="hero">
+      <div class="avatar">👗</div>
+      <div class="brand">Tiệm Đồ Xinh</div>
+      <div class="tagline">Gợi ý outfit mỗi ngày ✨ Link sản phẩm bên dưới</div>
+      <div class="socials">
+        <a href="https://www.facebook.com/profile.php?id=61588795599530" target="_blank" title="Facebook">📘</a>
+        <a href="#" title="TikTok">🎵</a>
+        <a href="#" title="Instagram">📷</a>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <div class="tab active" data-cat="quan">👖 Quần</div>
+      <div class="tab" data-cat="ao">👚 Áo</div>
+      <div class="tab" data-cat="tui">👜 Túi</div>
+      <div class="tab" data-cat="phukien">💍 Phụ kiện</div>
+    </div>
+
+    <!-- QUẦN -->
+    <section class="cat-section" id="cat-quan">
+      <div class="section-title">
+        <h2>Quần ống rộng</h2>
+        <span class="count">4 sản phẩm</span>
+      </div>
+      <div class="grid">
+
+        <a class="card" href="#" target="_blank">
+          <img src="images/quan-ong-rong-1.jpg" alt="Quần ống rộng kem phối áo da nâu">
+          <div class="card-body">
+            <div class="card-name">Quần ống rộng kem – phối áo da nâu</div>
+            <div class="card-price">Xem giá tại shop</div>
+            <div class="card-btn">Mua ngay →</div>
+          </div>
+        </a>
+
+        <a class="card" href="#" target="_blank">
+          <img src="images/quan-ong-rong-2.jpg" alt="Quần ống rộng dạo phố">
+          <div class="card-body">
+            <div class="card-name">Quần ống rộng basic – dễ phối đồ</div>
+            <div class="card-price">Xem giá tại shop</div>
+            <div class="card-btn">Mua ngay →</div>
+          </div>
+        </a>
+
+        <a class="card" href="#" target="_blank">
+          <img src="images/quan-ong-rong-3.jpg" alt="Quần ống rộng set dạo phố">
+          <div class="card-body">
+            <div class="card-name">Quần ống rộng vải suông – tôn dáng</div>
+            <div class="card-price">Xem giá tại shop</div>
+            <div class="card-btn">Mua ngay →</div>
+          </div>
+        </a>
+
+        <a class="card" href="#" target="_blank">
+          <img src="images/quan-ong-rong-4.jpg" alt="Quần ống rộng phối kính mát">
+          <div class="card-body">
+            <div class="card-name">Quần ống rộng form Hàn Quốc</div>
+            <div class="card-price">Xem giá tại shop</div>
+            <div class="card-btn">Mua ngay →</div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ÁO -->
+    <section class="cat-section" id="cat-ao" hidden>
+      <div class="section-title"><h2>Áo</h2></div>
+      <div class="soon">
+        <div class="icon">👚</div>
+        <div class="label">Sắp ra mắt</div>
+        <div class="sub">Mục Áo đang được cập nhật, quay lại sau nhé!</div>
+      </div>
+    </section>
+
+    <!-- TÚI -->
+    <section class="cat-section" id="cat-tui" hidden>
+      <div class="section-title"><h2>Túi</h2></div>
+      <div class="soon">
+        <div class="icon">👜</div>
+        <div class="label">Sắp ra mắt</div>
+        <div class="sub">Mục Túi đang được cập nhật, quay lại sau nhé!</div>
+      </div>
+    </section>
+
+    <!-- PHỤ KIỆN -->
+    <section class="cat-section" id="cat-phukien" hidden>
+      <div class="section-title"><h2>Phụ kiện</h2></div>
+      <div class="soon">
+        <div class="icon">💍</div>
+        <div class="label">Sắp ra mắt</div>
+        <div class="sub">Mục Phụ kiện đang được cập nhật, quay lại sau nhé!</div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Tiệm Đồ Xinh · Theo dõi tại <a href="https://www.facebook.com/profile.php?id=61588795599530" target="_blank">Facebook</a>
+    </footer>
+
+  </div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const sections = {
+    quan: document.getElementById('cat-quan'),
+    ao: document.getElementById('cat-ao'),
+    tui: document.getElementById('cat-tui'),
+    phukien: document.getElementById('cat-phukien'),
+  };
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const cat = tab.dataset.cat;
+      Object.keys(sections).forEach(key => {
+        sections[key].hidden = (key !== cat);
+      });
+    });
+  });
+</script>
+</body>
+</html>
